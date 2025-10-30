@@ -9,12 +9,9 @@ public class App {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Triangle x, y; // class
+        Triangle x, y; // classe
         x = new Triangle(); // instanciacao
         y = new Triangle();
-
-        double p;
-        double areay, areax;
 
 
         System.out.println("Enter the measures of triangle X:");
@@ -28,16 +25,11 @@ public class App {
         y.c = sc.nextDouble();
 
 
-        p = (x.a + x.b + x.c) / 2;
+        double areax = x.area(); // x.area() chama metodo da classe area
+        double areay = y.area();
 
-        areax = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.b));
         System.out.printf("Triangle X area: %.4f%n", areax);
-
-        p = (y.a + y.b + y.c) / 2;
-        areay = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
         System.out.printf("Triangle Y area: %.4f%n", areay);
-
-
         if(areax > areay){
             System.out.println("Large area: X");
         }
